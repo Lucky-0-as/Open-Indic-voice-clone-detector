@@ -1,0 +1,6 @@
+Source file: ./score/Marathi_scores.txt
+EER: 0.8888888888888888
+EER percentage: 88.88888888888889
+Threshold: 0.219709516
+FNR at EER: 0.8888888888888888
+FPR at EER: 0.8888888888888888
