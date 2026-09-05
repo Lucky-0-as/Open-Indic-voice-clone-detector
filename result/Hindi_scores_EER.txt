@@ -1,0 +1,6 @@
+Source file: ./score/Hindi_scores.txt
+EER: 0.8
+EER percentage: 80.0
+Threshold: 0.484579474
+FNR at EER: 0.8
+FPR at EER: 0.8
