@@ -15,7 +15,7 @@ The current `score/` directory contains:
 
 ```text
 score/
-├── eval_scores_using_best_dev_model_EER.txt
+├── eval_scores_using_best_dev_model.txt
 ├── Gujarati_scores.txt
 ├── Hindi_scores.txt
 └── Marathi_scores.txt
