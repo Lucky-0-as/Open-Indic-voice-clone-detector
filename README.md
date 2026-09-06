@@ -20,7 +20,7 @@ score/
 ├── Hindi_scores.txt
 └── Marathi_scores.txt
 ```
-- `eval_scores_using_best_dev_model_EER.txt`  – Evaluation score of AASIST on ASVspoof2019 Test Dataset.
+- `eval_scores_using_best_dev_model.txt`  – Evaluation score of AASIST on ASVspoof2019 Test Dataset.
 - `Gujarati_scores.txt`  – Evaluation score of AASIST on subset of IndicVoices-R and IndicSynth DataSet.
 - ` Hindi_scores.txt`  – Evaluation score of AASIST on subset of IndicVoices-R and IndicSynth DataSet.
 - `Marathi_scores.txt`  – Evaluation score of AASIST on subset of IndicVoices-R and IndicSynth DataSet.
