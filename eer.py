@@ -5,7 +5,8 @@ import os
 
 #config file loading
 config = configparser.ConfigParser()
-config.read("./eerOnIndicSynth.conf")
+config.read("./eer.conf")
+
 
 
 #get the source and output from config
@@ -89,16 +90,16 @@ for i in range(len(labels) - 1, -1, -1):
         running_nontarget += 1
 
 
-#calculate FNR and FPR for every threshold
+#calculate frr and far for every threshold
 
 n_target = len(target_scores)
 n_nontarget = len(nontarget_scores)
 
-fnr = []
-fpr = []
+frr = []
+far = []
 
-fnr.append(0)
-fpr.append(1)
+frr.append(0)
+far.append(1)
 
 for i in range(len(labels)):
 
@@ -108,8 +109,8 @@ for i in range(len(labels)):
     current_fnr = false_negatives / n_target
     current_fpr = false_positives / n_nontarget
 
-    fnr.append(current_fnr)
-    fpr.append(current_fpr)
+    frr.append(current_fnr)
+    far.append(current_fpr)
 
 
 #find the point where FNR and FPR are closest
@@ -117,9 +118,9 @@ for i in range(len(labels)):
 minimum_difference = float("inf")
 eer_index = 0
 
-for i in range(len(fnr)):
+for i in range(len(frr)):
 
-    difference = abs(fnr[i] - fpr[i])
+    difference = abs(frr[i] - far[i])
 
     if difference < minimum_difference:
         minimum_difference = difference
@@ -129,16 +130,19 @@ for i in range(len(fnr)):
 
 #calculate EER
 
-eer = (fnr[eer_index] + fpr[eer_index]) / 2
+eer = (frr[eer_index] + far[eer_index]) / 2
 
-eer_threshold = score_label_pairs[eer_index][0]
+if eer_index == 0:
+    eer_threshold = None
+else:
+    eer_threshold = score_label_pairs[eer_index - 1][0]
 
 print("\nEER results:")
 print("EER:", eer)
 print("EER percentage:", eer * 100)
 print("Threshold:", eer_threshold)
-print("FNR at EER:", fnr[eer_index])
-print("FPR at EER:", fpr[eer_index])
+print("FNR at EER:", frr[eer_index])
+print("FPR at EER:", far[eer_index])
 
 
 os.makedirs(output_dir, exist_ok=True)
@@ -148,7 +152,7 @@ with open(output_file, "w") as file:
     file.write(f"EER: {eer}\n")
     file.write(f"EER percentage: {eer * 100}\n")
     file.write(f"Threshold: {eer_threshold}\n")
-    file.write(f"FNR at EER: {fnr[eer_index]}\n")
-    file.write(f"FPR at EER: {fpr[eer_index]}\n")
+    file.write(f"FNR at EER: {frr[eer_index]}\n")
+    file.write(f"FPR at EER: {far[eer_index]}\n")
 
 print("\nResult saved to:", output_file)

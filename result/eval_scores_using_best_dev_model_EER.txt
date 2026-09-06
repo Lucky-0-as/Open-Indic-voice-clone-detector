@@ -1,0 +1,6 @@
+Source file: ./score/eval_scores_using_best_dev_model.txt
+EER: 0.008295112264154778
+EER percentage: 0.8295112264154778
+Threshold: 1.4934322834014893
+FNR at EER: 0.008293677770224337
+FPR at EER: 0.00829654675808522
