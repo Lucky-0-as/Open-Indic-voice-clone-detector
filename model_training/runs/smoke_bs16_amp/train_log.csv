@@ -1,0 +1,2 @@
+epoch,train_loss,val_eer,val_FreeVC24,val_Kokoro,val_Maya2native,val_Parler,val_ai4Bharat_IndicF5
+0,7.404243469238281,80.0,88.33962264150944,84.5,72.48648648648648,80.0,77.57142857142858

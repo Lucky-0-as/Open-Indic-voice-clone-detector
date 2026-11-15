@@ -1,0 +1,20 @@
+{
+  "data_root": "final_preprocessed_data",
+  "config": "config/AASIST.conf",
+  "init_weights": "models/weights/AASIST.pth",
+  "eval_only": false,
+  "epochs": 1,
+  "lr": 2e-05,
+  "lr_min_ratio": 0.05,
+  "warmup_steps": 20,
+  "batch_size": 8,
+  "subsample": 400,
+  "val_subsample": 200,
+  "weight_decay": 0.0001,
+  "freq_aug": false,
+  "amp": false,
+  "num_workers": 0,
+  "seed": 1234,
+  "output_dir": "runs",
+  "comment": "smoke2"
+}

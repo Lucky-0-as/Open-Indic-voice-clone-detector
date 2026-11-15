@@ -1,0 +1,312 @@
+
+================================================================================
+DATASET AUDIT
+================================================================================
+Dataset location: C:\Users\nelso\Desktop\CS613_NLP_Project\Assignment_1\aasist 2\final_preprocessed_data
+Audio inspection: ALL FILES
+
+================================================================================
+OVERALL DATASET SUMMARY
+================================================================================
+Total records:       81,838
+Real / bona fide:    20,000
+Synthetic:           61,838
+Unknown class:       0
+
+Number of generation models: 16
+
+OVERALL GENERATOR DISTRIBUTION
+generator_model
+Maya2native                 10000
+supertonic-3                10000
+VoxCPM2                     10000
+ai4Bharat_IndicF5            6000
+Espeak                       3000
+Flite                        3000
+Piper                        3000
+VITS                         3000
+Silero                       3000
+FreeVC24                     3000
+XTTS_v2                      3000
+Bodhan_ai                    1500
+Audio8_TTS_Realistic_Air     1322
+Kokoro                       1000
+Bark                          716
+Parler                        300
+
+================================================================================
+TRAIN SPLIT ANALYSIS
+================================================================================
+Total records:       58,400
+Real / bona fide:    15,400
+Synthetic:           43,000
+Unknown class:       0
+
+Number of generation models: 9
+
+GENERATOR-WISE SAMPLE COUNTS
+-----------------------------------------------------------------
+supertonic-3                            10,000
+VoxCPM2                                 10,000
+Maya2native                              6,000
+Espeak                                   3,000
+Flite                                    3,000
+Piper                                    3,000
+VITS                                     3,000
+Silero                                   3,000
+ai4Bharat_IndicF5                        2,000
+
+CLASS VS LABEL
+label          0      1
+class                  
+Bonafide       0  15400
+Synthetic  43000      0
+
+Class-label mismatches: 0
+
+MISSING METADATA VALUES
+filename                   0
+original_filename          0
+processed_path             0
+split                      0
+source_folder              0
+language                   0
+label                      0
+class                      0
+generator_model            0
+original_sampling_rate     0
+processed_sampling_rate    0
+original_duration          0
+processed_samples          0
+processed_duration         0
+
+Synthetic records without generator: 0
+
+Duplicate filenames: 0
+
+AUDIO FILE INVENTORY
+-----------------------------------------------------------------
+Metadata filenames:       58,400
+Unique metadata filenames:58,400
+Audio files on disk:      58,400
+Missing audio files:      0
+Extra audio files:        0
+
+INSPECTING ALL AUDIO FILES...
+Expected: 16000 Hz | Mono | 64600 frames
+Inspected 5,000 audio files...
+Inspected 10,000 audio files...
+Inspected 15,000 audio files...
+Inspected 20,000 audio files...
+Inspected 25,000 audio files...
+Inspected 30,000 audio files...
+Inspected 35,000 audio files...
+Inspected 40,000 audio files...
+Inspected 45,000 audio files...
+Inspected 50,000 audio files...
+Inspected 55,000 audio files...
+
+Total files inspected: 58,400
+Audio format/read errors: 0
+
+================================================================================
+VALIDATION SPLIT ANALYSIS
+================================================================================
+Total records:       11,600
+Real / bona fide:    3,300
+Synthetic:           8,300
+Unknown class:       0
+
+Number of generation models: 5
+
+GENERATOR-WISE SAMPLE COUNTS
+-----------------------------------------------------------------
+FreeVC24                                 3,000
+Maya2native                              2,000
+ai4Bharat_IndicF5                        2,000
+Kokoro                                   1,000
+Parler                                     300
+
+CLASS VS LABEL
+label         0     1
+class                
+Bonafide      0  3300
+Synthetic  8300     0
+
+Class-label mismatches: 0
+
+MISSING METADATA VALUES
+filename                   0
+original_filename          0
+processed_path             0
+split                      0
+source_folder              0
+language                   0
+label                      0
+class                      0
+generator_model            0
+original_sampling_rate     0
+processed_sampling_rate    0
+original_duration          0
+processed_samples          0
+processed_duration         0
+
+Synthetic records without generator: 0
+
+Duplicate filenames: 0
+
+AUDIO FILE INVENTORY
+-----------------------------------------------------------------
+Metadata filenames:       11,600
+Unique metadata filenames:11,600
+Audio files on disk:      11,600
+Missing audio files:      0
+Extra audio files:        0
+
+INSPECTING ALL AUDIO FILES...
+Expected: 16000 Hz | Mono | 64600 frames
+Inspected 5,000 audio files...
+Inspected 10,000 audio files...
+
+Total files inspected: 11,600
+Audio format/read errors: 0
+
+================================================================================
+TEST SPLIT ANALYSIS
+================================================================================
+Total records:       11,838
+Real / bona fide:    1,300
+Synthetic:           10,538
+Unknown class:       0
+
+Number of generation models: 6
+
+GENERATOR-WISE SAMPLE COUNTS
+-----------------------------------------------------------------
+XTTS_v2                                  3,000
+Maya2native                              2,000
+ai4Bharat_IndicF5                        2,000
+Bodhan_ai                                1,500
+Audio8_TTS_Realistic_Air                 1,322
+Bark                                       716
+
+CLASS VS LABEL
+label          0     1
+class                 
+Bonafide       0  1300
+Synthetic  10538     0
+
+Class-label mismatches: 0
+
+MISSING METADATA VALUES
+filename                   0
+original_filename          0
+processed_path             0
+split                      0
+source_folder              0
+language                   0
+label                      0
+class                      0
+generator_model            0
+original_sampling_rate     0
+processed_sampling_rate    0
+original_duration          0
+processed_samples          0
+processed_duration         0
+
+Synthetic records without generator: 0
+
+Duplicate filenames: 0
+
+AUDIO FILE INVENTORY
+-----------------------------------------------------------------
+Metadata filenames:       11,838
+Unique metadata filenames:11,838
+Audio files on disk:      11,838
+Missing audio files:      0
+Extra audio files:        0
+
+INSPECTING ALL AUDIO FILES...
+Expected: 16000 Hz | Mono | 64600 frames
+Inspected 5,000 audio files...
+Inspected 10,000 audio files...
+
+Total files inspected: 11,838
+Audio format/read errors: 0
+
+================================================================================
+GENERATOR OVERLAP ANALYSIS
+================================================================================
+Training generators: 9 ['Espeak', 'Flite', 'Maya2native', 'Piper', 'Silero', 'VITS', 'VoxCPM2', 'ai4Bharat_IndicF5', 'supertonic-3']
+Validation generators: 5 ['FreeVC24', 'Kokoro', 'Maya2native', 'Parler', 'ai4Bharat_IndicF5']
+Testing generators: 6 ['Audio8_TTS_Realistic_Air', 'Bark', 'Bodhan_ai', 'Maya2native', 'XTTS_v2', 'ai4Bharat_IndicF5']
+
+TRAIN ∩ VALIDATION: ['Maya2native', 'ai4Bharat_IndicF5']
+TRAIN ∩ TEST (SEEN): ['Maya2native', 'ai4Bharat_IndicF5']
+TEST ONLY (UNSEEN): ['Audio8_TTS_Realistic_Air', 'Bark', 'Bodhan_ai', 'XTTS_v2']
+VALIDATION ONLY: ['FreeVC24', 'Kokoro', 'Parler']
+
+================================================================================
+OVERALL METADATA CONSISTENCY CHECK
+================================================================================
+Overall metadata rows: 81,838
+Combined split rows:   81,838
+
+Master split column: split
+
+MASTER SPLIT DISTRIBUTION
+split
+train         58400
+test          11838
+validation    11600
+
+DUPLICATE RECORD CHECK
+Overall duplicates: 0
+Combined split duplicates: 0
+
+Columns being compared:
+['filename', 'original_filename', 'processed_path', 'source_folder', 'language', 'label', 'class', 'generator_model', 'original_sampling_rate', 'processed_sampling_rate', 'original_duration', 'processed_samples', 'processed_duration']
+
+OVERALL VS COMBINED SPLITS
+-----------------------------------------------------------------
+Records missing from splits: 0
+Extra records in splits:      0
+
+TRAIN comparison:
+  Missing: 0
+  Extra:   0
+  Result:  PASS
+
+VALIDATION comparison:
+  Missing: 0
+  Extra:   0
+  Result:  PASS
+
+TEST comparison:
+  Missing: 0
+  Extra:   0
+  Result:  PASS
+
+OVERALL METADATA RESULT: PASS
+
+================================================================================
+CROSS-SPLIT FILENAME OVERLAP
+================================================================================
+train ∩ validation: 0
+train ∩ test: 0
+validation ∩ test: 0
+
+No filename overlap found across splits.
+
+================================================================================
+FINAL AUDIT SUMMARY
+================================================================================
+Overall metadata consistency: PASS
+Cross-split filename check: PASS
+TRAIN       : PASS
+VALIDATION  : PASS
+TEST        : PASS
+
+================================================================================
+AUDIT COMPLETED: ALL CHECKED TESTS PASSED
+================================================================================
