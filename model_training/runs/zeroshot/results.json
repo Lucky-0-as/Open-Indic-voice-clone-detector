@@ -1,0 +1,23 @@
+{
+  "val": {
+    "pooled_eer": 74.69788243884629,
+    "per_generator_eer": {
+      "FreeVC24": 84.7939393939394,
+      "Kokoro": 91.1909090909091,
+      "Maya2native": 59.05530303030303,
+      "Parler": 71.98484848484848,
+      "ai4Bharat_IndicF5": 87.8090909090909
+    }
+  },
+  "test": {
+    "pooled_eer": 59.016986145378624,
+    "per_generator_eer": {
+      "Audio8_TTS_Realistic_Air": 55.6827650413127,
+      "Bark": 56.99162011173185,
+      "Bodhan_ai": 47.67948717948718,
+      "Maya2native": 58.75961538461538,
+      "XTTS_v2": 57.8397435897436,
+      "ai4Bharat_IndicF5": 89.06346153846154
+    }
+  }
+}
